@@ -23,7 +23,7 @@
 
 | 完成 | 名称 | 类型 | CPU | 内存 | 磁盘 | 操作系统 | 版本 | VM/CT安装选项 | IP 地址 | 主要软件 & 版本 | 下载地址 | 备份策略 | 说明 |
 |-------|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [ ] | 飞牛 NAS | VM | 2 核 | 10GB | 32GB + RAID10 | Ubuntu Server | 24.04 LTS | BIOS: SeaBIOS, 机型: Q35, VirtIO网卡, SCSI VirtIO磁盘控制器, 桥接网络 | 10.0.0.10 | NFS 1.3+, SMB/CIFS | https://ubuntu.com/download/server | 快照每周一次，重要数据卷每日备份 | NAS 存储共享给其他 VM / CT |
+| [ ] | 飞牛 NAS | VM | 2 核 | 10GB | 32GB + RAID10 | fnOS | 1.1.20-1596 | BIOS: SeaBIOS, 机型: Q35, VirtIO网卡, SCSI VirtIO磁盘控制器, 桥接网络 | 10.0.0.10 | NFS 1.3+, SMB/CIFS | https://ubuntu.com/download/server | 快照每周一次，重要数据卷每日备份 | NAS 存储共享给其他 VM / CT |
 | [ ] | iStore | VM | 1 核 | 2GB | 20GB | iStoreOS | 0.1.36 最新稳定 | BIOS: SeaBIOS, 机型: Q35, VirtIO网卡, SCSI VirtIO磁盘控制器, 桥接网络 | 10.0.0.11 | Tailscale Exit Node | https://istoreos.com | 快照每周一次 | 网络出口，手机/PC翻墙，ACL 配置控制流量 |
 | [ ] | Docker 主机 | VM | 1 核 | 6GB | 50GB | Ubuntu Server | 24.04 LTS | BIOS: SeaBIOS, 机型: Q35, VirtIO网卡, SCSI VirtIO磁盘控制器, 桥接网络 | 10.0.0.12 | Docker 23.x + Docker Compose | https://docs.docker.com/get-docker/ | 每周快照，重要容器卷每日备份 | 容器中间件运行环境，挂载 NAS 数据卷 `/mnt/nas_data/docker` |
 | [ ] | Gitea | VM | 1 核 | 2GB | 20GB | Ubuntu Server | 24.04 LTS | BIOS: SeaBIOS, 机型: Q35, VirtIO网卡, SCSI VirtIO磁盘控制器, 桥接网络 | 10.0.0.13 | Gitea 1.20.x | https://dl.gitea.io/gitea | 每周快照 | 代码仓库，数据库可用 Docker VM 内的 MySQL / PostgreSQL |
